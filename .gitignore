@@ -1,0 +1,5 @@
+*.log
+/test/reports
+/build
+/node_modules
+/.nyc_output
