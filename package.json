@@ -28,6 +28,11 @@
     "pretest": "npm run lint",
     "test": "nightwatch --config test/nightwatch.json"
   },
+  "echint": {
+    "ignore": [
+      "test/reports/**"
+    ]
+  },
   "devDependencies": {
     "chromedriver": "^2.31.0",
     "echint": "^4.0.1",
