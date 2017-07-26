@@ -64,7 +64,7 @@ Name          | Type     | Default  | Description
 > Additionally to standard `options`, when `options.verbose` is set to `true` it will log all successful `aXe` tests.
 
 ---
-> :copyright: [www.ahmadnassri.com](https://www.ahmadnassri.com/)  · 
+> :copyright: [ahmadnassri.com](https://www.ahmadnassri.com/)  · 
 > License: [ISC][license-url]  · 
 > Github: [@ahmadnassri](https://github.com/ahmadnassri)  · 
 > Twitter: [@ahmadnassri](https://twitter.com/ahmadnassri)
