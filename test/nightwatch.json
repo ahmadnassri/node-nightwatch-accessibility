@@ -1,9 +1,9 @@
 {
-  "src_folders" : ["./test/specs"],
-  "output_folder": "./test/reports",
-  "globals_path": "./test/globals.js",
-  "custom_commands_path": "./lib/commands",
-  "custom_assertions_path": "./lib/assertions",
+  "src_folders" : ["test/specs"],
+  "output_folder": "test/reports",
+  "globals_path": "test/globals.js",
+  "custom_commands_path": ["lib/commands"],
+  "custom_assertions_path": ["lib/assertions"],
   "test_settings": {
     "default": {
       "launch_url": "http://127.0.0.1",
