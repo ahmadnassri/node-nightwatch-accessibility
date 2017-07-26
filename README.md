@@ -21,8 +21,8 @@ Update your nightwatch config:
 ```js
 {
   custom_commands_path : [
-    "./node_modules/nightwatch-accessibility/lib/command",
-    "./node_modules/nightwatch-accessibility/lib/assert"
+    "./node_modules/nightwatch-accessibility/lib/commands",
+    "./node_modules/nightwatch-accessibility/lib/assertions"
   ]
 }
 ```
