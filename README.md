@@ -1,5 +1,7 @@
 # Nightwatch Accessibility [![version][npm-version]][npm-url] [![License][license-image]][license-url]
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/ahmadnassri/nightwatch-accessibility.svg)](https://greenkeeper.io/)
+
 > Nightwatch.js utility commands for accessibility testing with [`aXe`][axe-core].
 
 [![Build Status][travis-image]][travis-url]
