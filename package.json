@@ -18,7 +18,8 @@
     "node": ">=4"
   },
   "files": [
-    "lib"
+    "assertions",
+    "commands"
   ],
   "bugs": {
     "url": "https://github.com/ahmadnassri/nightwatch-accessibility/issues"
