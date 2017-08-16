@@ -6,7 +6,7 @@ const script = function (context, options, done) {
   })
 }
 
-module.exports.assertion = function (context, options) {
+module.exports.assertion = function (context, options, callback) {
   this.message = `${context} passes accessibility scan`
   this.value = (result) => result
   this.expected = true
@@ -14,6 +14,14 @@ module.exports.assertion = function (context, options) {
 
   this.command = (done) => this.api.executeAsync(script, [context, options], function (response) {
     const result = response.value.results
+
+    if (!result) {
+      const error = 'aXe failed to execute'
+
+      callback ? callback(error) && done(true) : this.assert.fail(error) && done(false)
+
+      return
+    }
 
     if (options.verbose) {
       for (const pass of result.passes) {
@@ -29,6 +37,8 @@ module.exports.assertion = function (context, options) {
       this.assert.fail(`${violation.help}`)
     }
 
-    done(result.violations.length === 0)
+    const success = result.violations.length === 0
+
+    callback ? callback(success) && done(true) : done(success)
   })
 }
