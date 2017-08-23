@@ -2,19 +2,25 @@ const driver = require('chromedriver')
 const server = require('./server')
 
 module.exports = {
-  before: (done) => {
+  abortOnAssertionFailure: false,
+
+  before (done) {
     server.start(driver.start)
 
-    console.log('servers started')
+    console.log('✔ servers started')
 
     done()
   },
 
-  after: (done) => {
+  after (done) {
     server.stop(driver.stop)
 
-    console.log('servers stopped')
+    console.log('✖ servers stopped')
 
     done()
+  },
+
+  port () {
+    return server.port()
   }
 }

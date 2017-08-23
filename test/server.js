@@ -11,6 +11,7 @@ server.on('request', (req, res) => {
 })
 
 module.exports = {
-  start: (done) => server.listen(8080, done),
-  stop: (done) => server.close(done)
+  start: (done) => server.listen(done),
+  stop: (done) => server.close(done),
+  port: () => server.address().port
 }

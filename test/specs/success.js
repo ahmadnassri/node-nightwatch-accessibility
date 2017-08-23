@@ -1,8 +1,10 @@
 module.exports = {
   '@tags': ['accessibility'],
-  'Demo': function (browser) {
+  'Success Demo': function (browser) {
+    const port = browser.globals.port()
+
     browser
-      .url('http://localhost:8080')
+      .url(`http://localhost:${port}`)
 
       .initAccessibility()
       .assert.accessibility('html', { verbose: true })

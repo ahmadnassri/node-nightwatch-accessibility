@@ -1,9 +1,10 @@
-
 module.exports = {
   '@tags': ['accessibility'],
-  'Demo': function (browser) {
+  'Fail Demo': function (browser) {
+    const port = browser.globals.port()
+
     browser
-      .url('http://localhost:8080')
+      .url(`http://localhost:${port}`)
 
       .assert.accessibility('html', { verbose: true }, (error) => browser.assert.equal(error, 'aXe failed to execute'))
 

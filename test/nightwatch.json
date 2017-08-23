@@ -6,7 +6,6 @@
   "custom_assertions_path": ["assertions"],
   "test_settings": {
     "default": {
-      "launch_url": "http://127.0.0.1",
       "selenium_port": 9515,
       "default_path_prefix" : "",
       "desiredCapabilities": {
