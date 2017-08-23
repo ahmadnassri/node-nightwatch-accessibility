@@ -1,6 +1,6 @@
 # Nightwatch Accessibility [![version][npm-version]][npm-url] [![License][license-image]][license-url]
 
-> Nightwatch.js utility commands for accessibility testing with [`aXe`][axe-core].
+> Nightwatch.js utility assertion for accessibility testing with [`aXe`][axe-core].
 
 [![Build Status][travis-image]][travis-url]
 [![Downloads][npm-downloads]][npm-url]
@@ -20,10 +20,8 @@ Update your nightwatch config:
 
 ```js
 {
-  custom_commands_path : [
-    ["./node_modules/nightwatch-accessibility/commands"],
-    ["./node_modules/nightwatch-accessibility/assertions"]
-  ]
+  custom_commands_path: ["./node_modules/nightwatch-accessibility/commands"],
+  custom_assertions_path: ["./node_modules/nightwatch-accessibility/assertions"]
 }
 ```
 
