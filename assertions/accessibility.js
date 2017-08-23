@@ -1,9 +1,11 @@
 const script = function (context, options, done) {
   if (!window.axe) done({ error: 'aXe not found. Make sure it has been injected' })
 
-  window.axe.run(context, options, function (err, results) {
-    done(err ? { error: err.toString() } : { results: results })
-  })
+  window
+    .axe
+    .run(context, options)
+    .then((results) => done({ results }))
+    .catch((error) => done({ error: error.toString() }))
 }
 
 module.exports.assertion = function (context, options, callback) {
@@ -34,7 +36,7 @@ module.exports.assertion = function (context, options, callback) {
     }
 
     for (const violation of result.violations) {
-      this.assert.fail(`${violation.help}`)
+      this.assert.fail(`${violation.help} [${violation.nodes[0].html}]`)
     }
 
     const success = result.violations.length === 0
