@@ -36,7 +36,7 @@ module.exports.assertion = function (context, options, callback) {
     }
 
     for (const violation of result.violations) {
-      this.assert.fail(`${violation.help} [${violation.nodes[0].html}]`)
+      this.assert.fail('policy violation', violation.helpUrl, `${violation.help} [${violation.nodes[0].html}]`)
     }
 
     const success = result.violations.length === 0
