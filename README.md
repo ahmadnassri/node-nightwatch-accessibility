@@ -59,7 +59,10 @@ Name          | Type     | Default  | Description
 **`context`** | `String` | `'html'` | [aXe Context][axe-context] Parameter
 **`options`** | `Object` | `null`   | [aXe Options][axe-options] Parameter     
 
-> Additionally to standard `options`, when `options.verbose` is set to `true` it will log all successful `aXe` tests.
+> In addition to the standard `options`:
+
+* `options.verbose` set to `true` will log all successful `aXe` tests.
+* `options.timeout` configures the nightwatch timeout, default value is `500 milliseconds`
 
 ---
 > :copyright: [ahmadnassri.com](https://www.ahmadnassri.com/)  · 
