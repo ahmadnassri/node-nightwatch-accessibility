@@ -1,5 +1,4 @@
 *.log
-.idea
 /test/reports
 /build
 /node_modules
