@@ -5,19 +5,23 @@ module.exports = {
   abortOnAssertionFailure: false,
 
   before (done) {
-    server.start(() => driver.start())
+    server.start(() => {
+      driver.start()
 
-    console.log('✔ servers started')
+      console.log('✔ servers started')
 
-    done()
+      done()
+    })
   },
 
   after (done) {
-    server.stop(() => driver.stop())
+    server.stop(() => {
+      driver.stop()
 
-    console.log('✖ servers stopped')
+      console.log('✖ servers stopped')
 
-    done()
+      done()
+    })
   },
 
   port () {
