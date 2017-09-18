@@ -6,7 +6,7 @@
   "custom_assertions_path": ["assertions"],
   "test_settings": {
     "default": {
-      "selenium_port": 8001,
+      "selenium_port": 4444,
       "default_path_prefix" : "",
       "desiredCapabilities": {
         "browserName": "chrome",

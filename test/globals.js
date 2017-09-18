@@ -6,7 +6,7 @@ module.exports = {
 
   before (done) {
     server.start(() => {
-      driver.start(['--port=8001'])
+      driver.start(['--port=4444', '--no-sandbox', '--headless', '--disable-gpu'])
 
       console.log('✔ servers started')
 
