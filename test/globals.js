@@ -6,7 +6,7 @@ module.exports = {
 
   before (done) {
     server.start(() => {
-      driver.start()
+      driver.start(['--port=8001'])
 
       console.log('✔ servers started')
 
