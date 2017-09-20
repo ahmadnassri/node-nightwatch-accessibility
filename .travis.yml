@@ -23,7 +23,7 @@ deploy:
 
   on:
     branch: master
-    node: 7
+    node: 8
 
 branches:
   except:
