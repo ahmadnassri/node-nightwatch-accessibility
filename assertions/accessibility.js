@@ -4,10 +4,10 @@ const script = function (context, options, done) {
   window
     .axe
     .run(context, options)
-    .then(function(results) {
+    .then(function (results) {
       done({ results: results })
     })
-    .catch(function(error) {
+    .catch(function (error) {
       done({ error: error.toString() })
     })
 }
