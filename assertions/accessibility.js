@@ -4,8 +4,12 @@ const script = function (context, options, done) {
   window
     .axe
     .run(context, options)
-    .then((results) => done({ results }))
-    .catch((error) => done({ error: error.toString() }))
+    .then(function(results) {
+      done({ results: results })
+    })
+    .catch(function(error) {
+      done({ error: error.toString() })
+    })
 }
 
 module.exports.assertion = function (context, options, callback) {
