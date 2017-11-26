@@ -39,7 +39,7 @@
     "echint": "^4.0.1",
     "nightwatch": "^0.9.16",
     "standard": "^10.0.2",
-    "tap": "^10.7.0"
+    "tap": "^11.0.0"
   },
   "dependencies": {
     "axe-core": "^2.4.2"
