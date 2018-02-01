@@ -35,13 +35,13 @@
     ]
   },
   "devDependencies": {
-    "chromedriver": "^2.31.0",
+    "chromedriver": "^2.35.0",
     "echint": "^4.0.1",
-    "nightwatch": "^0.9.16",
-    "standard": "^10.0.2",
-    "tap": "^10.7.0"
+    "nightwatch": "^0.9.19",
+    "standard": "^10.0.3",
+    "tap": "^11.1.0"
   },
   "dependencies": {
-    "axe-core": "^2.4.2"
+    "axe-core": "^2.6.1"
   }
 }
