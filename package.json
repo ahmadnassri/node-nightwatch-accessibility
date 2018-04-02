@@ -42,6 +42,6 @@
     "tap": "^11.1.0"
   },
   "dependencies": {
-    "axe-core": "^2.6.1"
+    "axe-core": "^3.0.0"
   }
 }
