@@ -24,16 +24,11 @@ env:
 
 # installing Chrome for e2e tests
 addons:
-  apt:
-    sources:
-      - google-chrome
-    packages:
-      - google-chrome-stable
-      - oracle-java8-set-default
+  chrome: stable
 
-# the following step should start the virtual X frame buffer: Xvfb process
 before_script:
-  - "sh -e /etc/init.d/xvfb start"
+  - "export DISPLAY=:99.0"
+  - "sh -e /etc/init.d/xvfb start" # the starting the virtual X frame buffer: Xvfb process
   - sleep 3 #wait a while before xvfb to start
 after_script:
   - "sh -e /etc/init.d/xvfb stop"
@@ -42,10 +37,6 @@ matrix:
   fast_finish: true
   allow_failures:
     - node_js: 4
-
-cache:
-  directories:
-    - node_modules
 
 before_deploy:
   - npm install --only=production semantic-release@v7.0.2
