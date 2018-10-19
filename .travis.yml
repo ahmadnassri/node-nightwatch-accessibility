@@ -1,3 +1,12 @@
+# based on https://flatmap.it/2017/11/16/starting-selenium-server-inside-travis/
+sudo: required
+
+dist: trusty
+
+cache:
+  directories:
+    - node_modules
+
 language: node_js
 
 node_js:
@@ -5,6 +14,29 @@ node_js:
  - 7
  - 6
  - 4
+
+# setting up environment variables
+env:
+  global:
+    - CXX=g++-4.8
+    - DISPLAY=:99.0
+    - CHROME_BIN=/usr/bin/google-chrome
+
+# installing Chrome for e2e tests
+addons:
+  apt:
+    sources:
+      - google-chrome
+    packages:
+      - google-chrome-stable
+      - oracle-java8-set-default
+
+# the following step should start the virtual X frame buffer: Xvfb process
+before_script:
+  - "sh -e /etc/init.d/xvfb start"
+  - sleep 3 #wait a while before xvfb to start
+after_script:
+  - "sh -e /etc/init.d/xvfb stop"
 
 matrix:
   fast_finish: true
