@@ -49,15 +49,15 @@ Injects the [`aXe`][axe-core] library into the current test page.
 
 Analyzes the defined `context` against applied `aXe` rules
 
-Name          | Type     | Default  | Description                    
-------------- | -------- | -------- | -------------------------------
-**`context`** | `String` | `'html'` | [aXe Context][axe-context] Parameter
-**`options`** | `Object` | `null`   | [aXe Options][axe-options] Parameter     
+| Name          | Type     | Default  | Description                          |
+| ------------- | -------- | -------- | ------------------------------------ |
+| **`context`** | `String` | `'html'` | [aXe Context][axe-context] Parameter |
+| **`options`** | `Object` | `null`   | [aXe Options][axe-options] Parameter |
 
 > In addition to the standard `options`:
 
-* `options.verbose` set to `true` will log all successful `aXe` tests.
-* `options.timeout` configures the nightwatch timeout, default value is `500 milliseconds`
+- `options.verbose` set to `true` will log all successful `aXe` tests.
+- `options.timeout` configures the nightwatch timeout, default value is `500 milliseconds`
 
 ---
 > Author: [Ahmad Nassri](https://www.ahmadnassri.com) &bull; 
