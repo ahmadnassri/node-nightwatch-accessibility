@@ -27,7 +27,7 @@
   },
   "scripts": {
     "lint:deps": "npx david --error404 --errorSCM --errorDepType",
-    "lint:ec": "npx editorconfig-checker .",
+    "lint:ec": "npx editorconfig-checker --exclude-pattern './test/reports/*.xml' .",
     "lint:js": "npx eslint .",
     "lint:md": "npx remark --quiet --frail .",
     "lint": "npx run-p lint:*",
