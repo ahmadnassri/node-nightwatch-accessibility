@@ -7,6 +7,12 @@ executors:
     docker:
       - image: ahmadnassri/build-essential
 
+  browsers:
+    working_directory: ~/src
+
+    docker:
+      - image: circleci/node:latest-browsers
+
 commands:
   persist:
     steps:
@@ -37,7 +43,7 @@ jobs:
       - run: npm run lint
 
   unit:
-    executor: app
+    executor: browsers
     steps:
       - attach
       - run: npm run test
