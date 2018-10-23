@@ -1,12 +1,8 @@
-# Nightwatch Accessibility [![version][npm-version]][npm-url] [![License][license-image]][license-url]
+# Nightwatch Accessibility
+
+[![License][license-image]][license-url] [![version][npm-image]][npm-url] [![Build Status][circle-image]][circle-url]
 
 > Nightwatch.js utility assertion for accessibility testing with [`aXe`][axe-core].
-
-[![Build Status][travis-image]][travis-url]
-[![Downloads][npm-downloads]][npm-url]
-[![Code Climate][codeclimate-quality]][codeclimate-url]
-[![Dependency Status][dependencyci-image]][dependencyci-url]
-[![Dependencies][david-image]][david-url]
 
 ## Install
 
@@ -64,29 +60,18 @@ Name          | Type     | Default  | Description
 * `options.timeout` configures the nightwatch timeout, default value is `500 milliseconds`
 
 ---
-> :copyright: [ahmadnassri.com](https://www.ahmadnassri.com/)  · 
-> License: [ISC][license-url]  · 
-> Github: [@ahmadnassri](https://github.com/ahmadnassri)  · 
-> Twitter: [@ahmadnassri](https://twitter.com/ahmadnassri)
+> Author: [Ahmad Nassri](https://www.ahmadnassri.com) &bull; 
+> Github: [@ahmadnassri](https://github.com/ahmadnassri) &bull; 
+> Twitter: [@AhmadNassri](https://twitter.com/AhmadNassri)
 
-[license-url]: http://choosealicense.com/licenses/isc/
-[license-image]: https://img.shields.io/github/license/ahmadnassri/nightwatch-accessibility.svg?style=flat-square
+[license-url]: LICENSE
+[license-image]: https://img.shields.io/github/license/ahmadnassri/nightwatch-accessibility.svg?style=for-the-badge&logo=circleci
 
-[travis-url]: https://travis-ci.org/ahmadnassri/nightwatch-accessibility
-[travis-image]: https://img.shields.io/travis/ahmadnassri/nightwatch-accessibility.svg?style=flat-square
+[circle-url]: https://circleci.com/gh/ahmadnassri/nightwatch-accessibility
+[circle-image]: https://img.shields.io/circleci/project/github/ahmadnassri/nightwatch-accessibility/master.svg?style=for-the-badge&logo=circleci
 
-[npm-url]: https://www.npmjs.com/package/nightwatch-accessibility
-[npm-version]: https://img.shields.io/npm/v/nightwatch-accessibility.svg?style=flat-square
-[npm-downloads]: https://img.shields.io/npm/dm/nightwatch-accessibility.svg?style=flat-square
-
-[codeclimate-url]: https://codeclimate.com/github/ahmadnassri/nightwatch-accessibility
-[codeclimate-quality]: https://img.shields.io/codeclimate/github/ahmadnassri/nightwatch-accessibility.svg?style=flat-square
-
-[david-url]: https://david-dm.org/ahmadnassri/nightwatch-accessibility
-[david-image]: https://img.shields.io/david/ahmadnassri/nightwatch-accessibility.svg?style=flat-square
-
-[dependencyci-url]: https://dependencyci.com/github/ahmadnassri/nightwatch-accessibility
-[dependencyci-image]: https://dependencyci.com/github/ahmadnassri/nightwatch-accessibility/badge?style=flat-square
+[npm-url]: https://www.npmjs.com/package/@ahmadnassri/nightwatch-accessibility
+[npm-image]: https://img.shields.io/npm/v/@ahmadnassri/nightwatch-accessibility.svg?style=for-the-badge&logo=npm
 
 [axe-core]: https://www.npmjs.com/package/axe-core
 [axe-options]: https://github.com/dequelabs/axe-core/blob/master/doc/API.md#options-parameter
