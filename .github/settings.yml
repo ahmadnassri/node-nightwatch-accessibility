@@ -2,7 +2,7 @@ _extends: .github
 
 repository:
   name: nightwatch-accessibility
-  description: nightwatch-accessibility
+  description: Nightwatch.js utility assertion for accessibility testing with aXe
   topics: nightwatch,accessibility,axe
   homepage: https://github.com/ahmadnassri/nightwatch-accessibility
   private: false
