@@ -38,7 +38,6 @@ module.exports = {
           'color-contrast': { enabled: false }
         }
       })
-      
       .end()
   }
 }

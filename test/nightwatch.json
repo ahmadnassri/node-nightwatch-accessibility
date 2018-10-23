@@ -1,12 +1,12 @@
 {
   "src_folders" : ["test/specs"],
   "output_folder": "test/reports",
-  "globals_path": "test/globals.js",
+  "globals_path": "globals.js",
   "custom_commands_path": ["commands"],
   "custom_assertions_path": ["assertions"],
   "test_settings": {
     "default": {
-      "selenium_port": 4444,
+      "webdriver.port": 4444,
       "default_path_prefix" : "",
       "desiredCapabilities": {
         "browserName": "chrome",
