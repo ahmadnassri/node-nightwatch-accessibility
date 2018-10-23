@@ -70,8 +70,8 @@ Analyzes the defined `context` against applied `aXe` rules
 [circle-url]: https://circleci.com/gh/ahmadnassri/nightwatch-accessibility
 [circle-image]: https://img.shields.io/circleci/project/github/ahmadnassri/nightwatch-accessibility/master.svg?style=for-the-badge&logo=circleci
 
-[npm-url]: https://www.npmjs.com/package/@ahmadnassri/nightwatch-accessibility
-[npm-image]: https://img.shields.io/npm/v/@ahmadnassri/nightwatch-accessibility.svg?style=for-the-badge&logo=npm
+[npm-url]: https://www.npmjs.com/package/nightwatch-accessibility
+[npm-image]: https://img.shields.io/npm/v/nightwatch-accessibility.svg?style=for-the-badge&logo=npm
 
 [axe-core]: https://www.npmjs.com/package/axe-core
 [axe-options]: https://github.com/dequelabs/axe-core/blob/master/doc/API.md#options-parameter
