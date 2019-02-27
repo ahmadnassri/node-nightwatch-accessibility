@@ -1,7 +1,7 @@
 const fs = require('fs')
 const path = require('path')
 
-const source = fs.readFileSync(path.resolve(path.join('node_modules', 'axe-core', 'axe.min.js')), 'utf8')
+const source = fs.readFileSync(path.resolve(path.join(path.dirname(require.resolve('axe-core')), 'axe.min.js')), 'utf8')
 
 exports.command = function () {
   this.execute(function (src) {
