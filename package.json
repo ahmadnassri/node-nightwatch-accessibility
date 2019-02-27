@@ -1,6 +1,6 @@
 {
   "private": false,
-  "version": "1.7.1",
+  "version": "1.8.0",
   "name": "nightwatch-accessibility",
   "description": "Nightwatch.js utility assertion for accessibility testing with aXe",
   "author": "Ahmad Nassri <ahmad@ahmadnassri.com> (https://www.ahmadnassri.com/)",
