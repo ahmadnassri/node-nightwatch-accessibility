@@ -34,8 +34,8 @@
     "test": "nightwatch --config test/nightwatch.json"
   },
   "devDependencies": {
-    "chromedriver": "^73.0.0",
-    "nightwatch": "^1.0.11"
+    "chromedriver": "^79.0.0",
+    "nightwatch": "^1.3.2"
   },
   "dependencies": {
     "axe-core": "^3.1.2"
