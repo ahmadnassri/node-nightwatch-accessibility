@@ -23,6 +23,8 @@ module.exports.assertion = function (context, options = {}) {
 
   const negate = this.negate
 
+  this.api.waitForElementVisible(context)
+
   this.evaluate = function (results) {
     if (!results) {
       this.api.assert[negate ? 'ok' : 'fail']('aXe failed to execute')
