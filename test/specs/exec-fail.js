@@ -6,7 +6,7 @@ module.exports = {
     browser
       .url(`http://localhost:${port}`)
 
-      .assert.accessibility('html', { verbose: true }, (error) => browser.assert.equal(error, 'aXe failed to execute'))
+      .assert.not.accessibility('html', { verbose: true })
 
       .end()
   }

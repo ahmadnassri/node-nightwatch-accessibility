@@ -4,9 +4,18 @@
   "globals_path": "globals.js",
   "custom_commands_path": ["commands"],
   "custom_assertions_path": ["assertions"],
+  "webdriver" : {
+    "start_process": true,
+    "server_path": "node_modules/.bin/chromedriver",
+    "port": 9515,
+    "cli_args": [
+      "--no-sandbox", 
+      "--headless", 
+      "--disable-gpu"
+    ]
+  },
   "test_settings": {
     "default": {
-      "webdriver.port": 4444,
       "default_path_prefix" : "",
       "desiredCapabilities": {
         "browserName": "chrome",
