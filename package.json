@@ -1,13 +1,15 @@
 {
-  "private": false,
-  "version": "1.8.0",
+  "version": "0.0.0-semantically-released",
   "name": "nightwatch-accessibility",
   "description": "Nightwatch.js utility assertion for accessibility testing with aXe",
   "author": "Ahmad Nassri <ahmad@ahmadnassri.com> (https://www.ahmadnassri.com/)",
-  "homepage": "https://github.com/ahmadnassri/nightwatch-accessibility",
+  "homepage": "https://github.com/ahmadnassri/node-nightwatch-accessibility",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ahmadnassri/nightwatch-accessibility.git"
+    "url": "https://github.com/ahmadnassri/node-nightwatch-accessibility.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ahmadnassri/node-nightwatch-accessibility/issues"
   },
   "license": "MIT",
   "keywords": [
@@ -16,28 +18,21 @@
     "axe"
   ],
   "engines": {
-    "node": ">=8"
+    "node": ">=12"
   },
   "files": [
     "assertions",
     "commands"
   ],
-  "bugs": {
-    "url": "https://github.com/ahmadnassri/nightwatch-accessibility/issues"
-  },
   "scripts": {
-    "lint:deps": "npx david --error404 --errorSCM --errorDepType",
-    "lint:ec": "npx editorconfig-checker --exclude-pattern './test/reports/*.xml' .",
-    "lint:js": "npx eslint .",
-    "lint:md": "npx remark --quiet --frail .",
-    "lint": "npx run-p lint:*",
-    "test": "nightwatch --config test/nightwatch.json"
+    "test": "nightwatch --config test/nightwatch.json",
+    "test:ci": "npm run test"
   },
   "devDependencies": {
-    "chromedriver": "^73.0.0",
-    "nightwatch": "^1.0.11"
+    "chromedriver": "^89.0.0",
+    "nightwatch": "^1.5.1"
   },
   "dependencies": {
-    "axe-core": "^3.1.2"
+    "axe-core": "^4.1.3"
   }
 }

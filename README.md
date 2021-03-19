@@ -1,12 +1,16 @@
 # Nightwatch Accessibility
 
-[![License][license-image]][license-url] [![version][npm-image]][npm-url] [![Build Status][circle-image]][circle-url]
+Nightwatch.js utility assertion for accessibility testing with aXe.
 
-> Nightwatch.js utility assertion for accessibility testing with [`aXe`][axe-core].
+[![license][license-img]][license-url]
+[![release][release-img]][release-url]
+[![super linter][super-linter-img]][super-linter-url]
+[![test][test-img]][test-url]
+[![semantic][semantic-img]][semantic-url]
 
 ## Install
 
-```bash
+``` bash
 npm install --only=production --save nightwatch-accessibility
 ```
 
@@ -14,7 +18,7 @@ npm install --only=production --save nightwatch-accessibility
 
 Update your nightwatch config:
 
-```js
+``` js
 {
   custom_commands_path: ["./node_modules/nightwatch-accessibility/commands"],
   custom_assertions_path: ["./node_modules/nightwatch-accessibility/assertions"]
@@ -23,7 +27,7 @@ Update your nightwatch config:
 
 Use in your tests:
 
-```js
+``` js
 module.exports = {
   'Test': function (browser) {
     browser
@@ -43,36 +47,41 @@ module.exports = {
 
 ### `browser.initAccessibility()`
 
-Injects the [`aXe`][axe-core] library into the current test page.
+Injects the [`aXe`][] library into the current test page.
 
 ### `browser.assert.accessibility(context, options)`
 
 Analyzes the defined `context` against applied `aXe` rules
 
-| Name          | Type     | Default  | Description                          |
-| ------------- | -------- | -------- | ------------------------------------ |
-| **`context`** | `String` | `'html'` | [aXe Context][axe-context] Parameter |
-| **`options`** | `Object` | `null`   | [aXe Options][axe-options] Parameter |
+| Name          | Type     | Default  | Description               |
+|---------------|----------|----------|---------------------------|
+| **`context`** | `String` | `'html'` | [aXe Context][] Parameter |
+| **`options`** | `Object` | `null`   | [aXe Options][] Parameter |
 
 > In addition to the standard `options`:
 
-- `options.verbose` set to `true` will log all successful `aXe` tests.
-- `options.timeout` configures the nightwatch timeout, default value is `500 milliseconds`
+-   `options.verbose` set to `true` will log all successful `aXe` tests.
+-   `options.timeout` configures the nightwatch timeout, default value is `500 milliseconds`
 
----
-> Author: [Ahmad Nassri](https://www.ahmadnassri.com) &bull; 
-> Github: [@ahmadnassri](https://github.com/ahmadnassri) &bull; 
+  [`aXe`]: https://www.npmjs.com/package/axe-core
+  [aXe Context]: https://github.com/dequelabs/axe-core/blob/master/doc/API.md#context-parameter
+  [aXe Options]: https://github.com/dequelabs/axe-core/blob/master/doc/API.md#options-parameter
+
+----
+> Author: [Ahmad Nassri](https://www.ahmadnassri.com/) &bull;
 > Twitter: [@AhmadNassri](https://twitter.com/AhmadNassri)
 
 [license-url]: LICENSE
-[license-image]: https://img.shields.io/github/license/ahmadnassri/nightwatch-accessibility.svg?style=for-the-badge&logo=circleci
+[license-img]: https://badgen.net/github/license/ahmadnassri/node-nightwatch-accessibility
 
-[circle-url]: https://circleci.com/gh/ahmadnassri/nightwatch-accessibility
-[circle-image]: https://img.shields.io/circleci/project/github/ahmadnassri/nightwatch-accessibility/master.svg?style=for-the-badge&logo=circleci
+[release-url]: https://github.com/ahmadnassri/node-nightwatch-accessibility/releases
+[release-img]: https://badgen.net/github/release/ahmadnassri/node-nightwatch-accessibility
 
-[npm-url]: https://www.npmjs.com/package/nightwatch-accessibility
-[npm-image]: https://img.shields.io/npm/v/nightwatch-accessibility.svg?style=for-the-badge&logo=npm
+[super-linter-url]: https://github.com/ahmadnassri/node-nightwatch-accessibility/actions?query=workflow%3Asuper-linter
+[super-linter-img]: https://github.com/ahmadnassri/node-nightwatch-accessibility/workflows/super-linter/badge.svg
 
-[axe-core]: https://www.npmjs.com/package/axe-core
-[axe-options]: https://github.com/dequelabs/axe-core/blob/master/doc/API.md#options-parameter
-[axe-context]: https://github.com/dequelabs/axe-core/blob/master/doc/API.md#context-parameter
+[test-url]: https://github.com/ahmadnassri/node-nightwatch-accessibility/actions?query=workflow%3Atest
+[test-img]: https://github.com/ahmadnassri/node-nightwatch-accessibility/workflows/test/badge.svg
+
+[semantic-url]: https://github.com/ahmadnassri/node-nightwatch-accessibility/actions?query=workflow%3Arelease
+[semantic-img]: https://badgen.net/badge/📦/semantically%20released/blue

@@ -1,0 +1,34 @@
+# ----------------------------------------------------------- #
+# Note: this file originates in ahmadnassri/template-template #
+# ----------------------------------------------------------- #
+
+name: super-linter
+
+on: [ push, pull_request ]
+
+jobs:
+  deduplicate:
+    timeout-minutes: 5
+
+    runs-on: ubuntu-latest
+
+    # run on external PRs, but not on our internal PRs
+    if: github.event_name == 'push' || github.event.pull_request.head.repo.full_name != github.repository
+
+    steps:
+      - run: echo ::info ::de-duplicate ran successfully
+
+  lint:
+    timeout-minutes: 5
+
+    needs: deduplicate
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - uses: github/super-linter@v3.15.3
+        env:
+          LOG_LEVEL: ERROR
+          VALIDATE_ALL_CODEBASE: false
+          GITHUB_TOKEN: ${{ github.token }}

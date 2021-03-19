@@ -1,5 +1,9 @@
+# ----------------------------------------------------------- #
+# Note: this file originates in ahmadnassri/template-node-lib #
+# ----------------------------------------------------------- #
+
+.nyc_output
+coverage
+node_modules
+dist
 *.log
-/test/reports
-/build
-/node_modules
-/.nyc_output

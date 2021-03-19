@@ -1,0 +1,8 @@
+version: 2.0
+
+id: nightwatch-accessibility
+
+about:
+  title: Nightwatch Accessibility
+  description: Nightwatch.js utility assertion for accessibility testing with aXe.
+  repository: ahmadnassri/node-nightwatch-accessibility
