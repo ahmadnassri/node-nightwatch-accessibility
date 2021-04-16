@@ -29,7 +29,7 @@
     "test:ci": "npm run test"
   },
   "devDependencies": {
-    "chromedriver": "^89.0.0",
+    "chromedriver": "^90.0.0",
     "nightwatch": "^1.5.1"
   },
   "dependencies": {
