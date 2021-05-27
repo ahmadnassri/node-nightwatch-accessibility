@@ -8,6 +8,10 @@
     "type": "git",
     "url": "https://github.com/ahmadnassri/node-nightwatch-accessibility.git"
   },
+  "funding": {
+    "type" : "individual",
+    "url" : "https://github.com/sponsors/ahmadnassri"
+  },
   "bugs": {
     "url": "https://github.com/ahmadnassri/node-nightwatch-accessibility/issues"
   },
