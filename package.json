@@ -9,8 +9,8 @@
     "url": "https://github.com/ahmadnassri/node-nightwatch-accessibility.git"
   },
   "funding": {
-    "type" : "individual",
-    "url" : "https://github.com/sponsors/ahmadnassri"
+    "type": "individual",
+    "url": "https://github.com/sponsors/ahmadnassri"
   },
   "bugs": {
     "url": "https://github.com/ahmadnassri/node-nightwatch-accessibility/issues"
@@ -34,9 +34,9 @@
   },
   "devDependencies": {
     "chromedriver": "^94.0.0",
-    "nightwatch": "^1.5.1"
+    "nightwatch": "^1.7.11"
   },
   "dependencies": {
-    "axe-core": "^4.1.3"
+    "axe-core": "^4.3.3"
   }
 }
