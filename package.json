@@ -34,7 +34,7 @@
   },
   "devDependencies": {
     "chromedriver": "^94.0.0",
-    "nightwatch": "^1.7.11"
+    "nightwatch": "^2.3.0"
   },
   "dependencies": {
     "axe-core": "^4.3.3",
