@@ -1,4 +1,0 @@
-{
-  "os": ["ubuntu-latest", "macos-latest"],
-  "node-version": [12, 14, 15]
-}
