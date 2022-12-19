@@ -12,7 +12,9 @@ Nightwatch.js utility assertion for accessibility testing with aXe.
 npm install nightwatch-accessibility
 ```
 
-## Usage (Nightwatch \>= 2.x)
+## Usage
+
+### Nightwatch \>= 2.x
 
 add `nightwatch-accessibility` to the plugins array
 
@@ -22,7 +24,7 @@ add `nightwatch-accessibility` to the plugins array
 }
 ```
 
-## Usage (Nightwatch \<= 1.x)
+### Nightwatch \<= 1.x
 
 ``` js
 {
