@@ -1,14 +1,14 @@
-module.exports = {
-  '@tags': ['accessibility'],
-  'Success Demo': function (browser) {
-    const port = browser.globals.port()
+// module.exports = {
+//   '@tags': ['accessibility'],
+//   'Success Demo': function (browser) {
+//     const port = browser.globals.port()
 
-    browser
-      .url(`http://localhost:${port}`)
+//     browser
+//       .url(`http://localhost:${port}`)
 
-      .initAccessibility()
-      .assert.accessibility('html', { verbose: true })
+//       .initAccessibility()
+//       .assert.accessibility('html', { verbose: true })
 
-      .end()
-  }
-}
+//       .end()
+//   }
+// }

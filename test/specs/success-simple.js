@@ -1,14 +1,16 @@
 module.exports = {
   '@tags': ['accessibility'],
-  'Success Demo': function (browser) {
-    const port = browser.globals.port()
-
+  'Fail Demo': function (browser) {
     browser
-      .url(`http://localhost:${port}`)
+      .url('https://www.w3.org/WAI/demos/bad/after/home.html')
 
       .initAccessibility()
-      .assert.accessibility('html')
+      .assert.accessibility('html', {
+        rules: {
+          'region': { enabled: false },
+          'landmark-one-main': { enabled: false }
+        }
+      })
 
-      .end()
   }
 }

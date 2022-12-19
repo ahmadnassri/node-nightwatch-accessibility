@@ -19,17 +19,18 @@
   "keywords": [
     "nightwatch",
     "accessibility",
+    "WCAG",
     "axe"
   ],
   "engines": {
     "node": ">=14"
   },
   "files": [
-    "assertions",
-    "commands"
+    "nightwatch"
   ],
+  "main": "index.js",
   "scripts": {
-    "test": "nightwatch --config test/nightwatch.json",
+    "test": "nightwatch",
     "test:ci": "npm run test"
   },
   "devDependencies": {
@@ -37,7 +38,6 @@
     "nightwatch": "^2.5.4"
   },
   "dependencies": {
-    "axe-core": "^4.6.1",
-    "tap": "^16.3.2"
+    "axe-core": "^4.6.1"
   }
 }

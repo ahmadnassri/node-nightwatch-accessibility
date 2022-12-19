@@ -1,21 +1,10 @@
 module.exports = {
   '@tags': ['accessibility'],
-  'Success Demo': function (browser) {
-    const port = browser.globals.port()
-
+  'Fail Demo': function (browser) {
     browser
-      .url(`http://localhost:${port}`)
+      .url('https://www.w3.org/WAI/demos/bad/before/home.html')
 
       .initAccessibility()
-
-      // make the page fail
-      .execute(function () {
-        const h1 = document.createElement('h1')
-        document.body.appendChild(h1)
-      })
-
       .assert.not.accessibility('html')
-
-      .end()
   }
 }
