@@ -2,7 +2,7 @@
 ## Install
 
 ```bash
-npm install --only=production --save nightwatch-accessibility
+npm install nightwatch-accessibility
 ```
 
 ## Usage
@@ -53,7 +53,6 @@ Analyzes the defined `context` against applied `aXe` rules
 
 - `options.verbose` set to `true` will log all successful `aXe` tests.
 - `options.timeout` configures the nightwatch timeout, default value is `500 milliseconds`
-
 
 [axe-core]: https://www.npmjs.com/package/axe-core
 [axe-options]: https://github.com/dequelabs/axe-core/blob/master/doc/API.md#options-parameter

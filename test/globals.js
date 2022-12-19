@@ -5,14 +5,14 @@ module.exports = {
 
   before (done) {
     server.start(() => {
-      console.log('✔ servers started')
+      console.log('✅ servers started')
       done()
     })
   },
 
   after (done) {
     server.stop(() => {
-      console.log('✖ servers stopped')
+      console.log('❌ servers stopped')
       done()
     })
   },

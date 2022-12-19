@@ -1,27 +1,46 @@
 {
-  "src_folders" : ["test/specs"],
-  "output_folder": "test/reports",
-  "globals_path": "globals.js",
+  "src_folders": ["test/specs"],
   "custom_commands_path": ["commands"],
   "custom_assertions_path": ["assertions"],
-  "webdriver" : {
-    "start_process": true,
-    "server_path": "node_modules/.bin/chromedriver",
-    "port": 9515,
-    "cli_args": [
-      "--no-sandbox",
-      "--headless",
-      "--disable-gpu"
-    ]
+  "globals_path": "globals.js",
+  "webdriver": {},
+  "test_workers": {
+    "enabled": true
   },
   "test_settings": {
     "default": {
-      "default_path_prefix" : "",
+      "desiredCapabilities": {
+        "browserName": "chrome"
+      },
+
+      "webdriver": {
+        "start_process": true,
+        "server_path": "node_modules/.bin/chromedriver"
+      }
+    },
+
+    "chrome": {
       "desiredCapabilities": {
         "browserName": "chrome",
-        "chromeOptions": {
-          "args" : ["--no-sandbox", "--headless"]
+        "goog:chromeOptions": {
+          "w3c": true,
+          "args": [
+            "--headless",
+            "--no-sandbox",
+            "--ignore-certificate-errors",
+            "--allow-insecure-localhost"
+          ]
         }
+      },
+
+      "webdriver": {
+        "start_process": true,
+        "server_path": "",
+        "cli_args": [
+          "--headless",
+          "--no-sandbox",
+          "--disable-gpu"
+        ]
       }
     }
   }
