@@ -5,14 +5,21 @@
 npm install nightwatch-accessibility
 ```
 
-## Usage
+## Usage (Nightwatch >= 2.x)
 
-Update your nightwatch config:
+add `nightwatch-accessibility` to the plugins array
 
 ```js
 {
-  custom_commands_path: ["./node_modules/nightwatch-accessibility/commands"],
-  custom_assertions_path: ["./node_modules/nightwatch-accessibility/assertions"]
+  plugins: ['nightwatch-accessibility']
+}
+
+## Usage (Nightwatch <= 1.x)
+
+```js
+{
+  custom_commands_path: ["./node_modules/nightwatch-accessibility/nightwatch/commands"],
+  custom_assertions_path: ["./node_modules/nightwatch-accessibility/nightwatch/assertions"]
 }
 ```
 
@@ -22,14 +29,16 @@ Use in your tests:
 module.exports = {
   'Test': function (browser) {
     browser
-      .initAccessibility()
+      // initiate aXe
+      .initAccessibility() 
+
+      // execute accessibility check
       .assert.accessibility('#app', {
         verbose: true,
         rules: {
           'color-contrast': { enabled: false }
         }
       })
-      .end()
   }
 }
 ```

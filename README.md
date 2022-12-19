@@ -12,14 +12,21 @@ Nightwatch.js utility assertion for accessibility testing with aXe.
 npm install nightwatch-accessibility
 ```
 
-## Usage
+## Usage (Nightwatch \>= 2.x)
 
-Update your nightwatch config:
+add `nightwatch-accessibility` to the plugins array
 
 ``` js
 {
-  custom_commands_path: ["./node_modules/nightwatch-accessibility/commands"],
-  custom_assertions_path: ["./node_modules/nightwatch-accessibility/assertions"]
+  plugins: ['nightwatch-accessibility']
+}
+
+## Usage (Nightwatch <= 1.x)
+
+```js
+{
+  custom_commands_path: ["./node_modules/nightwatch-accessibility/nightwatch/commands"],
+  custom_assertions_path: ["./node_modules/nightwatch-accessibility/nightwatch/assertions"]
 }
 ```
 
@@ -29,14 +36,16 @@ Use in your tests:
 module.exports = {
   'Test': function (browser) {
     browser
-      .initAccessibility()
+      // initiate aXe
+      .initAccessibility() 
+
+      // execute accessibility check
       .assert.accessibility('#app', {
         verbose: true,
         rules: {
           'color-contrast': { enabled: false }
         }
       })
-      .end()
   }
 }
 ```
@@ -58,8 +67,8 @@ Analyzes the defined `context` against applied `aXe` rules
 
 > In addition to the standard `options`:
 
--   `options.verbose` set to `true` will log all successful `aXe` tests.
--   `options.timeout` configures the nightwatch timeout, default value is `500 milliseconds`
+- `options.verbose` set to `true` will log all successful `aXe` tests.
+- `options.timeout` configures the nightwatch timeout, default value is `500 milliseconds`
 
   [`aXe`]: https://www.npmjs.com/package/axe-core
   [aXe Context]: https://github.com/dequelabs/axe-core/blob/master/doc/API.md#context-parameter
