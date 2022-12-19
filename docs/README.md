@@ -13,6 +13,7 @@ add `nightwatch-accessibility` to the plugins array
 {
   plugins: ['nightwatch-accessibility']
 }
+```
 
 ## Usage (Nightwatch <= 1.x)
 

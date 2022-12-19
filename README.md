@@ -20,10 +20,11 @@ add `nightwatch-accessibility` to the plugins array
 {
   plugins: ['nightwatch-accessibility']
 }
+```
 
-## Usage (Nightwatch <= 1.x)
+## Usage (Nightwatch \<= 1.x)
 
-```js
+``` js
 {
   custom_commands_path: ["./node_modules/nightwatch-accessibility/nightwatch/commands"],
   custom_assertions_path: ["./node_modules/nightwatch-accessibility/nightwatch/assertions"]
